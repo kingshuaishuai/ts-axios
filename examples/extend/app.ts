@@ -26,7 +26,9 @@ import axios from '../../src'
 //   }
 // })
 //
-// axios.get('/extend/get')
+// axios.get('/extend/get').then(res => {
+//   console.log(res.data)
+// })
 //
 // axios.options('/extend/options')
 //

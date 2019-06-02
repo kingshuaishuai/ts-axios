@@ -6,6 +6,8 @@ import axios from '../../src/index'
 //   params: {
 //     foo: ['bar', 'baz']
 //   }
+// }).then(res => {
+//   console.log(res.data)
 // })
 //
 // axios({

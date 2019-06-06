@@ -34,6 +34,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
         config,
         request
       }
+
       handleResponse(response)
     }
 

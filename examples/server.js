@@ -35,6 +35,7 @@ registerErrorRouter()
 registerExtendRouter()
 registerInterceptorRouter()
 registerConfigRouter()
+registerCancelRouter()
 registerMoreRouter()
 
 app.use(router)
@@ -138,7 +139,7 @@ function registerInterceptorRouter() {
 }
 
 function registerConfigRouter() {
-  router.post('/config/post', function(req,res) {
+  router.post('/config/post', function(req, res) {
     res.json(req.body)
   })
 }
@@ -146,5 +147,18 @@ function registerConfigRouter() {
 function registerMoreRouter() {
   router.get('/more/get', function(req,res) {
     res.json(req.cookies)
+  })
+}
+function registerCancelRouter() {
+  router.get('/cancel/get', function(req, res) {
+    setTimeout(() => {
+      res.json('hello')
+    }, 1000)
+  })
+
+  router.post('cancel/post', function(req, res) {
+    setTimeout(() => {
+      res.json(req.body)
+    })
   })
 }
